@@ -13,7 +13,9 @@ driver.get("https://www.makemytrip.com/flights/?cmp=SEM|M|DF|B|Brand|B_M_Makemyt
 driver.maximize_window()
 time.sleep(1)
 driver.refresh()
-time.sleep(5)
+time.sleep(2)
+driver.find_element(By.XPATH,"/html/body/div[1]/div/div[1]/div[1]/div[2]/div[2]/div/section/span").click()
+time.sleep(2)
 #click flights tab
 #flights_tab = str(driver.find_element(By.XPATH("/html/body/div[1]/div/div[1]/div[1]/div[2]/div/div/nav/ul/li[1]/div/a/span[2]")))
 #flights_tab.click()
