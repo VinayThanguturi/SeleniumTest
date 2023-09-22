@@ -8,6 +8,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 # Initialize Chrome driver instance
 driver = webdriver.Chrome(service=ChromeService(executable_path=ChromeDriverManager().install()))
 
+
 # Navigate to the url
 driver.get("https://www.makemytrip.com")
 driver.maximize_window()
@@ -38,7 +39,7 @@ time.sleep(4)
 driver.find_element(By.XPATH,"//span[@aria-label='Next Month']").click()
 time.sleep(2)
 driver.find_element(By.XPATH,"//div[@aria-label='Tue Nov 14 2023']//p[contains(text(),'14')]").click()
-time.sleep(2)
+
 driver.find_element(By.XPATH,"//div[@aria-label='Sat Nov 18 2023']//div[@class='dateInnerCell']").click()
 time.sleep(2)
 driver.find_element(By.XPATH,"//a[contains(@class,'primaryBtn font24 latoBold widgetSearchBtn')]").click()
