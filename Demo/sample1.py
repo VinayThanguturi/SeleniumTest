@@ -9,16 +9,17 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 driver = webdriver.Chrome(service=ChromeService(executable_path=ChromeDriverManager().install()))
 
 # Navigate to the url
-driver.get("https://www.makemytrip.com/flights/?cmp=SEM|M|DF|B|Brand|B_M_Makemytrip_Search_Exact|Brand_Top_5_Exact|Expanded|&s_kwcid=AL!1631!3!!e!!o!!makemytrip.&ef_id=27aeb12bbbc31b94b196d42e1d50db9b:G:s&msclkid=27aeb12bbbc31b94b196d42e1d50db9b")
+driver.get("https://www.makemytrip.com")
 driver.maximize_window()
-time.sleep(1)
-driver.refresh()
-time.sleep(2)
+time.sleep(3)
 driver.find_element(By.XPATH,"/html/body/div[1]/div/div[1]/div[1]/div[2]/div[2]/div/section/span").click()
-time.sleep(2)
-#click flights tab
+
+time.sleep(2)#click flights tab
 #flights_tab = str(driver.find_element(By.XPATH("/html/body/div[1]/div/div[1]/div[1]/div[2]/div/div/nav/ul/li[1]/div/a/span[2]")))
 #flights_tab.click()
+time.sleep(3)
+driver.find_element(By.XPATH,"//span[@class='chNavIcon appendBottom2 chSprite chFlights active']").click()
+time.sleep(3)
 #click on roundtrip
 driver.find_element(By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]").click()
 time.sleep(2)
